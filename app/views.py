@@ -17,10 +17,10 @@ data = []
 '''
 be sure to edit this information with the creditentials for YOUR sql server
 '''
-mysql2 = MySQLdb.connect(host= "YOUR SERVER HERE",
-    user="YOUR DB USER HERE",
-    passwd="YOUR DB PASSWORD HERE",
-    db="YOUR DB NAME HERE")
+mysql2 = MySQLdb.connect(host= "mysql.server",
+    user="wvup",
+    passwd="pass",
+    db="wvup$hawkcrypt")
 '''
 Did you change the mysql connect information to match YOUR mysql server????
 '''
@@ -28,7 +28,7 @@ Did you change the mysql connect information to match YOUR mysql server????
 '''
 CHANGE UPLOAD_FOLDER PATH
 '''
-UPLOAD_FOLDER = "/YOUR/PATH/TO/UPLOAD/FILES"
+UPLOAD_FOLDER = "/home/wvup/mysite/projecttreequo/app/static/imgs/profilepics/"
 '''
 DID YOU CHANGE THE UPLOAD_FOLDER PATH?
 '''
