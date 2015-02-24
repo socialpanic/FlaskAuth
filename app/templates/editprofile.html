@@ -1,0 +1,126 @@
+
+
+
+{% extends "banner.html" %}
+{% block content %}
+
+
+	<div id ='content'>
+	<div id = 'main1'>
+        <div id="contact">
+	    <p><b><h2>{{session.userdata[4]}} {{session.userdata[5]}}</h2></b></p>
+			    <div id = 'profilepic'>
+			        {% if profilepic %}
+				<p><img src="{{ url_for('static', filename='imgs/profilepics/'+profilepic) }}" height="150" width = "150" /></p>
+				{% else %}
+				<img src = "static/imgs/userpic.png"/>
+				{% endif %}
+				<form action="/upload_file" method=post enctype=multipart/form-data>
+                <input type=file name=file><input type=submit value=Upload></form>
+				<p><h4>About</h4></p>
+		    <br>
+		    <p>{{session.userdata[25]}}</p>
+			    </div>
+			    </div>
+
+		<div id='contact'>
+		    <br>
+		    <p><h4>Stats</h4></p>
+		    <br>
+            <p><b>Questions: </b> </p>
+            <p><b>Answers: </b> </p>
+            <p><b>Likes: </b> </p>
+            <p><b>Hates: </b> </p>
+	    </div>
+	    <br>
+
+	    <div id = 'contact'>
+	        <br>
+	        <p><h4>Contact {{session.userdata[4]}}</h4></p>
+	        <br>
+	        <p><b>eMail:</b> </p>
+			<p><b>Website: </b></p>
+			<p><b>Facebook: </b></p>
+			<p><b>Twitter: </b></p>
+
+	    </div>
+	    <br>
+
+		<div id = 'contact'>
+        <br>
+        <p style="text-align: center;"><h4>Followers</h4></p>
+        <br>
+        </div>
+
+        <div id = 'contact'>
+        <br>
+        <p style="text-align: center;"><h4>Following</h4></p>
+        <br>
+        </div>
+	</div>
+
+
+    <div id = 'center'>
+<p><form action="/update_profile" method="post"><h2>Update {{username}}'s Profile</h2></p>
+
+
+
+            <div id="block" style="text-align: right;"><p>First Name</p></div>
+            <div id ="block"><p><input type="text" style='margin: 10px;'name="firstname" maxlength="255"  /></p></div>
+
+            <div id="block" style="text-align: right;"> <p>Last Name</p></div>
+            <div id ="block"> <p><input type="text" style='margin: 10px;'name="lastname" maxlength="255"  /></p></div>
+
+            <div id="block" style="text-align: right;"> <p>Password</p></div>
+            <div id ="block"> <p><input type="text" style='margin: 10px;'name="password" maxlength="255"  /></p></div>
+
+            <div id="block"style="text-align: right;"><p>Confirm Password</p></div>
+            <div id ="block"><p><input type="text" style='margin: 10px;'name="confirm_password" maxlength="255"  /></p></div>
+
+            <input type="submit" style="margin:5px; background-color: orange; color:green; text-align:center; padding:5px; name=input; font-size:18px" value="Update"></form>
+            <!--
+			<p>Country: <input type="text" style='margin: 10px;'name="country" maxlength="255"  /></p>
+			<p>New Password: <input type="text" style='margin: 10px;'name="country" maxlength="255"  /></p>
+			<p>Confirm New Password: <input type="text" style='margin: 10px;'name="country" maxlength="255"  /></p>
+			<p>State or Province: <input type="text" style='margin: 10px;'name="state/province" maxlength="255"  /></p>
+			<p>Profession: <input type="text" style='margin: 10px;'name="profession" maxlength="255"  /></p>
+			<p>Education: <input type="text" style='margin: 10px;'name="education" maxlength="255" /></p>
+			<p>Facebook: <input type="text" style='margin: 10px;'name="facebook" maxlength="255"  /></p>
+			<p>Twitter: <input type="text" style='margin: 10px;'name="twitter" maxlength="255" /></p>
+			<p>Google+: <input type="text" style='margin: 10px;'name="googleplus" maxlength="255" /></p>
+			<p>Website: <input type="text" style='margin: 10px;'name="website" maxlength="255"  /></p>
+			<p>Description: <input type="text" cols="40" rows="5" style="width:200px; height:50px;" style='margin: 10px;'name="description" maxlength="255" /></p>
+			<input type="submit" style="margin:5px; background-color: orange; color:green; text-align:center; padding:5px; name=input; font-size:18px" value="Update"></form>-->
+        </div>
+
+	</div>
+
+	<div id='main2'>
+
+	    <div id='sidebox'>
+	       <h4>follow?</h4>
+	    </div>
+
+	    <div id='sidebox'>
+	        <h4>notifications</h4>
+	    </div>
+
+	    <div id='sidebox'>
+	        <h4>bookmarks</h4>
+	    </div>
+
+	    <div id='sidebox'>
+	        <h4>trending</h4>
+
+	    </div>
+
+	</div>
+
+
+	</div>
+
+
+
+	</div>
+
+{%endblock%}

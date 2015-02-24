@@ -1,0 +1,171 @@
+
+
+{% extends "banner.html" %}
+{% block content %}
+	<div id = 'main1'>
+
+		<div id = 'sidebox'>
+			<p><h2>Subjects</h2></p>
+			<p>Art</p>
+			<p>Tech</p>
+			<p>Conspiracy</p>
+			<p>Politics</p>
+			<p>Education</p>
+			<p>Jobs</p>
+			<p>International</p>
+			<p>Media</p>
+			<p>Current Events</p>
+
+
+		</div>
+
+
+	</div>
+
+
+	<div id = 'center'>
+
+		<div id = 'userdata'>
+
+			<div id = 'commit2'>
+				<h1>//USERNAME//</h1>
+				<p><img src = "static/imgs/userpic.png"/></p>
+				<input type="file" value="upload"/>
+				<p><b>Description: </b>Likes rifles and politics.</p>
+				<p><b>Votes: </b>2</p>
+				<p><b>Friends: </b>13</p>
+				<p><b>(<a href="/editprofile">Edit Profile</a>)</b></p>
+
+			</div>
+			<div id = 'commit2'>
+				<p><h1>Personal Info</h1></p>
+				<p><b>First Name: </b>{{data[1]}}</p>
+				<p><b>Last Name: </b>{{data[2]}}</p>
+				<p><b>eMail: </b> {{data[3]}}</p>
+				<p><b>Website: </b>www.thelonegunman.com</p>
+				<p><b>Facebook: </b>magicbullet@gmail.com</p>
+				<p><b>Twitter: </b>www.twitter.com/ozzman</p>
+				<p><h1>Contact</h1>
+				<p>Private Message</p>
+				<p>Ask a Question</p>
+				<p>Follow</p>
+			</div>
+
+		</div>
+
+		<div id = 'commit1'>
+			<div id = "avatarbox"><img style="width: 100%;" src="static/imgs/userpic.png"/></div>
+			<div id = "questonrow">
+				<div id = "question"><b>Sample Question Here</b></div>
+				<div id = "upvote"><img style="height:100%; width:100%;" src="static/imgs/voteup.png"/></div>
+				<div id = "downvote"><img <img style="height:100%; width:100%;"src="static/imgs/votedown.png"/></div>
+			</div>
+			<div id = "metarow">
+				<div id = "meta"><i>User: leeharvy   15 answers</i></div>
+				<div id = "upcount">2</div>
+				<div id = "downcount">290</div>
+			</div>
+		</div>
+
+		<div id = 'commit1'>
+			<div id = "avatarbox"><img style="width: 100%;" src="static/imgs/userpic.png"/></div>
+			<div id = "questonrow">
+				<div id = "question"><b>How much wood could a woodchuck chuck if a woodchuck could chuck wood?</b></div>
+				<div id = "upvote"><img style="height:100%; width:100%;" src="static/imgs/voteup.png"/></div>
+				<div id = "downvote"><img <img style="height:100%; width:100%;"src="static/imgs/votedown.png"/></div>
+			</div>
+			<div id = "metarow">
+				<div id = "meta"><i>User: leeharvy   15 answers</i></div>
+				<div id = "upcount">2</div>
+				<div id = "downcount">290</div>
+			</div>
+		</div>
+
+
+		<div id = 'commit1'>
+			<div id = "avatarbox"><img style="width: 100%;" src="static/imgs/userpic.png"/></div>
+			<div id = "questonrow">
+				<div id = "question" style="font-size: 15px;"></div>
+				<div id = "upvote"><img style="height:100%; width:100%;" src="static/imgs/voteup.png"/></div>
+				<div id = "downvote"><img <img style="height:100%; width:100%;"src="static/imgs/votedown.png"/></div>
+			</div>
+			<div id = "metarow">
+				<div id = "meta"></div>
+				<div id = "upcount"></div>
+				<div id = "downcount"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id = 'main2'>
+
+		<div id = 'sidebox'>
+
+			<div id = 'sidebox'>
+			<p>crawler</p>
+			<p> GOES HERE</p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+		</div>
+		</div>
+
+
+
+
+
+	</div>
+
+	<div id = 'main2'>
+	<div id = 'sidebox'>
+			<p><h1>Join Today</h1></p>
+			<p><form method="post" action="/post" target="_blank" ></p>
+			<p><input type="text" style='margin: 10px;'name="firstname" maxlength="255" value="firstname" /></p>
+			<p><input type="text" style='margin: 10px;'name="lastname" maxlength="255" value="lastname" /></p>
+			<p><input type="text" style='margin: 10px;'name="username" maxlength="255" value="username" /></p>
+			<p><input type="password" style='margin: 10px;'name="password" maxlength="255" value="Password" /></p>
+			<p><input type="password" style='margin: 10px;'name="confirmpass" maxlength="255" value="Confirm Pass" /></p>
+			<p><input type="text" style='margin: 10px;'name="email" maxlength="255" value="email" /></p>
+			<input type="submit" style="margin:5px; background-color: orange; color:green; text-align:center; padding:5px; name=input; font-size:18px" value="Join"></form>
+
+
+		</div>
+
+		<div id = 'sidebox'>
+			<p>ADSENSE</p>
+			<p>AD GOES HERE</p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+		</div>
+
+		<div id = 'sidebox'>
+			<p>SPONSORED content</p>
+			<p> GOES HERE</p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			<p> </p>
+		</div>
+
+	</div>
+
+{%endblock%}

@@ -1,0 +1,84 @@
+
+
+{% extends "banner.html" %}
+{% block content %}
+<div id ='content'>
+	<div id = 'main1'>
+			<p><b><h2></h2></b></p>
+			    <div id = 'profilepic'>
+			        {% if profilepic %}
+				<p><img src="{{ url_for('static', filename='imgs/profilepics/'+profilepic) }}" height="150" width = "150" /></p>
+				{% else %}
+				<img src = "static/imgs/userpic.png"/>
+				{% endif %}
+				<p><h4>About</h4></p>
+		    <br>
+
+		    Study the views.py file to get an understanding of how it calls the database and returns templates with data
+
+			    </div>
+
+		<div id = 'userstats'>
+        <p><h4>Stats</h4></p>
+
+        {% if session %}
+		        {{session}}
+		        {% endif %}
+		    <br>
+
+		    Study the templating structure and see how I use the information in the session variable above to supply the information below
+
+            <p><b>Firstname: </b>{{session.userdata[1]}}</p>
+            <p><b>Lastname: </b> {{session.userdata[2]}}</p>
+            <p><b>Username: </b> {{session.userdata[3]}}</p>
+            <p><b>Email: </b> {{session.userdata[4]}}</p>
+		</div>
+
+
+	</div>
+
+
+    <div id = 'center'>
+
+        <p>In the Views.py file be sure to change any instance of directory paths to match your system (specifically your username)</p>
+        <p>helpful links for getting started:</p>
+                        <p>Templating</p>
+        <p>http://www.w3schools.com/html/default.asp</p>
+        <p>http://www.w3schools.com/css/default.asp</p>
+                          <p>Database</p>
+        <p>http://www.w3schools.com/sql/default.asp</p>
+                            <p>Flask</p>
+        <p>http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world</p>
+        <p>http://www.fullstackpython.com/flask.html</p>
+
+
+
+
+
+        </div>
+
+
+
+	<div id='main2'>
+	    <div id='sidebox'>
+	       <h4>SIDE BOX</h4>
+	    </div>
+
+	    <div id='sidebox'>
+	        <h4>SIDE BOX</h4>
+	    </div>
+
+	    <div id='sidebox'>
+	        <h4>SIDE BOX</h4>
+	    </div>
+
+	    <div id='sidebox'>
+	        <h4>SIDE BOX</h4>
+	    </div>
+
+	 </div>
+
+	 {% endblock %}
+
+
+

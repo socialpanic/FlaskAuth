@@ -1,0 +1,113 @@
+
+
+{% extends "banner.html" %}
+{% block content %}
+<div id ='content'>
+	<div id = 'main1'>
+			<p><b><h2>{{session.userdata[4]}} {{session.userdata[5]}}</h2></b></p>
+			    <div id = 'profilepic'>
+			        {% if profilepic %}
+				<p><img src="{{ url_for('static', filename='imgs/profilepics/'+profilepic) }}" height="150" width = "150" /></p>
+				{% else %}
+				<img src = "static/imgs/userpic.png"/>
+				{% endif %}
+				<p><h4>About</h4></p>
+		    <br>
+		    <p>{{session.userdata[25]}}</p>
+			    </div>
+
+		<div id = 'userstats'>
+
+		</div>
+		<br>
+
+		<div id='contact'>
+		    <br>
+		    <p><h4>Stats</h4></p>
+		    <br>
+            <p><b>Questions: </b> </p>
+            <p><b>Answers: </b> </p>
+            <p><b>Likes: </b> </p>
+            <p><b>Hates: </b> </p>
+	    </div>
+	    <br>
+
+	    <div id = 'contact'>
+	        <br>
+	        <p><h4>Contact {{session.userdata[4]}}</h4></p>
+	        <br>
+	        <p><b>eMail:</b> {{session.userdata[3]}}</p>
+			<p><b>Website: </b>{{session.userdata[22]}}</p>
+			<p><b>Facebook: </b>{{session.userdata[19]}}</p>
+			<p><b>Twitter: </b>{{session.userdata[20]}}</p>
+
+	    </div>
+	    <br>
+
+		<div id = 'contact'>
+        <br>
+        <p style="text-align: center;"><h4>Followers</h4></p>
+        <br>
+        </div>
+
+        <div id = 'contact'>
+        <br>
+        <p style="text-align: center;"><h4>Following</h4></p>
+        <br>
+        </div>
+	</div>
+
+
+    <div id = 'center'>
+
+
+            <div id = 'ask'>
+    		<form action = "/ask" method="post">
+                <p> <input maxlength="255" style="width:100%; font-size:20px;"type="text" name="question" id="questbox" value="What is the meaning of life?"></p>
+    		</div>
+    		<div id = 'submitquestion'>
+        		<p><input style="margin:3px; background-color: orange; color:green; text-align:right; padding:2px; font-size:15px" type="submit" value=" ? "</p>
+		    </div>
+            <hr>
+
+        {% for x in session.questdata %}
+            <div id = "contentbox">
+            <div id = "metarow">
+                {% for key in x[13].split() %}
+                <i style="color:gray;"><a href="/tag/{{key}}">{{key}}</a></i> |
+                {% endfor %}
+                </div>
+            <br>
+    		<div id = "question"><img style="float:left;" src="{{ url_for('static', filename='imgs/profilepics/'+x[1]+'pic') }}" height="40" width="40"/><a href="/question/{{x[5]}}"><b>{{x[5]}}</b></a></div>
+    		<div id = "metarow">User: <a href="/member/{{x[1]}}"><i>{{x[2]}} {{x[3]}}</i></a> | Answers:{{x[9]}} </div>
+            <!--<div id = "ansavatar" style="float; right;"></div>
+            <div id = "answer">questionbox</div>
+            <div id = "metarow">meta</div>-->
+            </div>
+    		<br>
+
+        {% endfor %}
+        </div>
+
+	</div>
+
+	<div id='main2'>
+	    <div id='sidebox'>
+	       <h4>follow?</h4>
+	    </div>
+
+	    <div id='sidebox'>
+	        <h4>notifications</h4>
+	    </div>
+
+	    <div id='sidebox'>
+	        <h4>bookmarks</h4>
+	    </div>
+
+	    <div id='sidebox'>
+	        <h4>trending</h4>
+	        {% if counts %}
+	            {% for count in counts %}
+	                 <p><a href = "/tag/{{count[0]}}"><h5>{{count[0]}}</h5></a></p>
+	            {% endfor %}
+	        {% endif %}

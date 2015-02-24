@@ -1,0 +1,64 @@
+<html>
+<head><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/stylesheet.css') }}">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<title>Project Treequo</title>
+</head>
+<body>
+
+</div>
+    <div id = header>
+    <div id = 'head1'>
+        <ul style="display:inline; float:left; padding-left: 25%">
+			<li style="display:inline; float:left; padding-left: 10px; padding-top:10px"></li>
+			<li style="display:inline; float:left; padding-left: 10px;padding-top:10px;"><form method="post" action="/search"><input type="text" maxlength="255" name="query" style="width:500px;"/><a href="/search"></form></li>
+		</ul>
+	</div>
+	<div id='head2'>
+
+            <ul style="display:inline; float:right;">
+
+                {% if profilepic %}
+
+		    <li style="display:inline; float:left; padding-right:15px; padding-top:15px;"><a href = "#"><img src="{{ url_for('static', filename='imgs/profilepics/'+profilepic) }}" height="25" width = "25" /></a>
+
+                    <ul>
+                       <li><a href = "/editprofile">Edit</a></li>
+                       <li><a href = "/logout">Logout</a></li>
+                    </ul>
+                </li>
+
+
+		    {% else %}
+
+
+		    <li style="display:inline; float:left; padding-right:15px; padding-top:15px;"<a href="#"><a href="#" data-dropdown="#dropdown-1"><img src = "static/imgs/userpic.png" height="25" width = "25"/></a></li>
+                <ul>
+                  <li><a href="/editprofile">Edit Profile</a></li>
+                  <li><a href="/logout">Logout</a></li>
+                </ul>
+              </li>
+
+		    {% endif %}
+
+	        <li style="display:inline; float:left; padding-right:15px; padding-top:15px;"><a href = "/home"><img src="static/imgs/home.png" height="25" width="25"/></a></li>
+		    <li style="display:inline; float:left; padding-right:15px; padding-top:15px;"><a href = "/logout"><img src="static/imgs/msg.png" height="25" width="25"//></a></li>
+			<li style="display:inline; float:left; padding-right:15px; padding-top:15px;"><a href = "/editprofile"><img src="static/imgs/notif.png" height="25" width="25"//></a></li>
+
+	       </ul>
+
+
+    </div>
+	</div>
+
+{% block content %}{% endblock %}
+</body>
+</html>
+

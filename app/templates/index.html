@@ -1,0 +1,42 @@
+<html>
+<head><head><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/indexstyle.css') }}">
+<title>HawkCrypt</title>
+</head>
+<body bgcolor="navy">
+
+</div>
+	<div id = 'main1'>
+
+		<p style="font-size: 50px;"><img src = "static/imgs/logo.png"/ height="100" width="100"><b>Welcome to HawkCrypt.</b></p>
+		<br>
+		<br>
+		<br>
+		<p style="font-size: 30px;">Store, Sort, and Search an encrypted database!</p>
+		<p style="font-size: 30px;">Keep your data private without compromising functionality.</p>
+
+	</div>
+
+	<div id = 'main2'>
+
+ 		<div id = 'forum'>
+ 			<form action = "/login" method="post"><p><input type="text" size="18" name="user"  maxlength="255" value="User" /></p><p><input type="password" size="10"
+		name="pass" maxlength="255" value="pass" /><input type="submit" style="background-color: navy; color:white; text-align:center; padding:5px; name=input; font-size:18px" value="Login"></p></form>
+
+		<p style="text-align: left; font-size: 14px; padding-left: 10%;"><a href = "/forgotpass">Forgot Password</a> </div></p>
+
+ 		<div id = 'forum'>
+ 			<p style="text-align: left;"><b>Sign Up Today!</b style="text-align: left; font-size: 14px;"> - build your database.</p>
+			<p><form method="post" action="/join" target="_blank" ></p>
+			<p><input type="text" name="firstname" size="15" maxlength="255" value="firstname" /></p>
+			<p><input type="text" name="lastname"size="15"  maxlength="255" value="lastname" /></p>
+			<p><input type="text" name="username" size="15" maxlength="255" value="username" /></p>
+			<p><input type="password" name="password" size="15" maxlength="255" value="Password" /></>
+			<p><input type="password" name="confirmpass" size="15" maxlength="255" value="Confirm Pass" /></p>
+			<p><input type="text" name="email" maxlength="255" size="15" value="email" /></p>
+			<input type="submit" style="background-color: navy; color:white; text-align:center; padding:5px; name=input; font-size:18px" value="Join"></form>
+ 		</div>
+	</div>
+
+
+</body>
+</html>

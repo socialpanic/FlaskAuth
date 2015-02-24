@@ -1,0 +1,322 @@
+
+* { margin: 0; padding: 0; }
+
+body{
+	background-color:#F8F8F8;
+}
+
+input[type="text"]{
+    font-size: 20px;
+    /*Applying CSS3 gradient*/
+    background: -moz-linear-gradient(center top , #FFFFFF,  #EEEEEE 1px, #FFFFFF 40px);
+    background: -webkit-gradient(linear, left top, left 40, from(#FFFFFF), color-stop(5%, #EEEEEE) to(#FFFFFF));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBFBFB', endColorstr='#FFFFFF');
+
+    /*Applying CSS 3radius*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    /*Applying CSS3 box shadow*/
+    -moz-box-shadow: 0 0 2px #DDDDDD;
+    -webkit-box-shadow: 0 0 2px #DDDDDD;
+    box-shadow: 0 0 2px #DDDDDD;
+}
+
+input[type="password"]{
+    border: 1px solid #DDDDDD;
+    font-size: 20px;
+
+    /*Applying CSS3 gradient*/
+    background: -moz-linear-gradient(center top , #FFFFFF,  #EEEEEE 1px, #FFFFFF 20px);
+    background: -webkit-gradient(linear, left top, left 20, from(#FFFFFF), color-stop(5%, #EEEEEE) to(#FFFFFF));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBFBFB', endColorstr='#FFFFFF');
+
+    /*Applying CSS 3radius*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    /*Applying CSS3 box shadow*/
+    -moz-box-shadow: 0 0 2px #DDDDDD;
+    -webkit-box-shadow: 0 0 2px #DDDDDD;
+    box-shadow: 0 0 2px #DDDDDD;
+}
+
+input[type="text"]:hover
+{
+    border:1px solid #cccccc;
+}
+input[type="text"]:focus
+{
+    box-shadow:0 0 2px #FFFE00;
+}
+
+#header {
+    position: fixed;
+    width:100%;
+    height: 6%;
+    background-color: navy;
+    background-repeat: repeat-x;
+}
+
+#questbox {
+    color: gray;
+    font-style: bold;
+    text-align: center;
+}
+
+#head1 {
+	float: left;
+	height: 6%;
+	width: 75%;
+	color: black;
+	background-color: navy;
+    background-repeat: repeat-x;
+
+}
+
+#head2 {
+	float: left;
+	height: 6%;
+	text-align: right;
+	width: 25%;
+	color: black;
+	background-color: navy;
+    background-repeat: repeat-x;
+
+}
+
+#content {
+    padding-top: 4%;
+    width: 100%;
+}
+
+#left {
+	padding-top: 15%;
+	float: left;
+	float: top;
+	position: 25%;
+	width: 100%;
+	color: black;
+	margin: auto;
+}
+
+#commit2 {
+
+	float: top;
+	float: left;
+	text-align: left;
+	background-color: white;
+	width: 50%;
+	height: 100%;
+}
+
+#main1 {
+
+	float: left;
+	width: 25%;
+	height: 100%;
+	color: black;
+	padding-left: 3%;
+	padding-right:1%;
+}
+
+#editprofile {
+	padding-left: 30%;
+	padding-right: 30%;
+	width: 40%;
+	background-color: green;
+	text-align: center;
+	height: 100%;
+	color: black;
+}
+
+#center {
+	float: left;
+	width:40%;
+	text-align: center;
+	height: 100%;
+	color: black;
+}
+
+
+
+#main2 {
+    position: fixed;
+    right: 0;
+    float: left;
+	font-family: Georgia;
+	color: black;
+	width: 30%;
+	height: 100%;
+}
+
+#sidebox {
+    float: right;
+	font-size: 10px;
+	text-align: center;
+	margin:2%;
+	margin-top:3%;
+	width: 90%;
+	color: black;
+	padding: 5px;
+	border-bottom: solid lightgrey;
+}
+
+#commit1 {
+    width: 100%;
+    height: 25%;
+	color:black;
+	text-align: left;
+	background-color:yellow;
+	font-family: Georgia;
+	font-size: 15px;
+    border-bottom: solid lightgrey;
+}
+
+#askbox {
+    width:100%;
+    text-align: center;
+    padding-bottom: 10%;
+
+}
+
+#ask {
+    width:95%;
+    margin: auto;
+	border-radius: 10px;
+	text-align: center;
+	float: left;
+}
+
+#submitquestion {
+    float:right;
+    width: 5%;
+}
+
+#metarow {
+    float: top;
+    text-align: left;
+    height: 3%;
+    width: 100%;
+
+}
+
+
+#ansavatar {
+    float:top;
+    float:right;
+    background-color: black;
+    width:20%;
+    height:10%;
+}
+
+#question {
+	float: top;
+	width: 90%;
+	font-size: 20px;
+	text-align: left;
+	color: black;
+}
+#contentbox {
+    border-bottom: solid lightgrey;
+}
+
+#answer {
+	float: top;
+	width: 100%;
+	font-size: 15%;
+	text-align: left;
+	background-color: gray;
+	height: 10%;
+	color: black;
+}
+
+#navlist li
+{
+    display: inline;
+    list-style-type: none;
+
+    padding-right: 20px;
+}
+#meta {
+	clear: all;
+	float:left;
+	color: gray;
+	width:80%;
+	height: 100%;
+	background-color:white;
+}
+
+#upcount {
+	clear: all;
+	float: left;
+	text-align: center;
+	width: 10%;
+	height: 100%;
+	color: black;
+	background-color: white;
+}
+
+#profilepic {
+    float: top;
+    float: left;
+    width: 100%;
+    padding: left: 2%;
+    margin-top:2%;
+}
+#userdata {
+    float: top;
+    float: left;
+    width: 100%;
+    padding-top: 4%;
+
+}
+#userstats {
+    margin-top: 10%;
+    float: top;
+    float: left;
+    width: 100%;
+    padding-top: 4%;
+    border-bottom: solid lightgrey;
+}
+
+#contact {
+    float: top;
+    float: left;
+    width: 100%;
+    padding: left: 2%;
+    border-bottom: solid lightgrey;
+}
+#block {
+    float: left;
+    width: 50%;
+}
+
+/* unvisited link */
+a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: blue;
+}
+
+/* mouse over link */
+a:hover {
+    color: blue;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+ul > li {display: block; float: right; margin-right: 10px; position: relative; padding: 0.5em; line-height: 1em}
+ul ul {display: none; width: 150px; position:absolute; top: 2em; left: 0}
+ul ul > li {float: left; background-color: green; font-size: 25px;}
+ul > li:hover > ul,
+ul > a:hover + ul {display: block}
+
