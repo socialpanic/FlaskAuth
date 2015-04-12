@@ -39,44 +39,95 @@
 
 
     <div id = 'center'>
+        {% if msg %}
+		        {{msg}}
+		        {% endif %}
 
-        <p>In the Views.py file be sure to change any instance of directory paths to match your system (specifically your username)</p>
-        <p>helpful links for getting started:</p>
-                        <p>Templating</p>
-        <p>http://www.w3schools.com/html/default.asp</p>
-        <p>http://www.w3schools.com/css/default.asp</p>
-                          <p>Database</p>
-        <p>http://www.w3schools.com/sql/default.asp</p>
-                            <p>Flask</p>
-        <p>http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world</p>
-        <p>http://www.fullstackpython.com/flask.html</p>
+        <p ><input id="Create" type="image" src= "static/imgs/myAdd.png" height="100" width = "100" onclick="set_create();" /><input id="Read" type="image" src= "static/imgs/myRead.png" height="100" width = "100" onclick="set_read();" /><input id="Update" type="image" src= "static/imgs/myUpd.png" height="100" width = "100" onclick="Update_Tables();" /><input id="Delete" type="image" src= "static/imgs/myDel.png" height="100" width = "100" onclick="Delete_Tables();" /></p>
 
-
-
-
+        <div id = "interm">
 
         </div>
 
+        <div id = "outterm">
+
+        </div>
+
+    </div>
 
 
-	<div id='main2'>
-	    <div id='sidebox'>
-	       <h4>SIDE BOX</h4>
-	    </div>
 
-	    <div id='sidebox'>
-	        <h4>SIDE BOX</h4>
-	    </div>
 
-	    <div id='sidebox'>
-	        <h4>SIDE BOX</h4>
-	    </div>
 
-	    <div id='sidebox'>
-	        <h4>SIDE BOX</h4>
-	    </div>
+	 <script>
 
-	 </div>
+	    function set_create(){
+
+	        document.getElementById("interm").innerHTML = document.getElementById("interm").innerHTML = "<form method='post' action='/create_student' ><p><input type='text' name='new_student_fname' placeholder='First Name'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_lname' placeholder='Last Name'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_age' placeholder='Age'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_dob_month' maxlength='2' size='2' placeholder='birth month(1-12)'><input type='text' name='new_student_dob_day' size='2' maxlength='2' placeholder='birth day(1-31)'><input type='text' name='new_student_birthyear' size='4' maxlength='4' placeholder='Birth Year'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_phone' placeholder='Phone'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_email' placeholder='Email'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_address1' placeholder='Address 1'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_address2' placeholder='Address 2'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_city' placeholder='City'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_state' placeholder='State'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_zip' placeholder='Zip'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_major' placeholder='Major'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_advisor' placeholder='Advisor'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_gpa' placeholder='GPA'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_password' placeholder='Password'></p>"+
+                                                                                                            "<p><input type='text' name='confirmpass' placeholder='ConfirmPassword'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_credits' placeholder='Credit Hours'></p>"+
+                                                                                                            "<p><input type='text' name='new_student_license' placeholder='License Plate'></p>"+
+                                                                                                            "<p><input type='submit' value='Create'></p></form>";
+
+	    }
+
+	    function set_read(){
+
+	        document.getElementById("interm").innerHTML = "<p><form method='post' action='/read_student' ><input type='text' id='search_students' placeholder='Find Students'></p><p><input type='submit' value='Create'></form></p>"+
+	                                                        "<table border='1' style='width:100%; font-size: 12px; text-align: left'><tr><td>ID</td><td>First Name</td><td>Last Name</td><td>Age</td><td>Birth Month</td><td>Birth Day</td><td>Birth Year</td><td>Phone</td><td>Email</td><td>Address 1</td><td>Address 2</td><td>City</td><td>State</td><td>Zip Code</td><td>Major</td><td>Advisor</td><td>GPA</td><td>Password</td><td>Credits</td><td>License Plate</td><td>Update</td><td>Delete</td></tr></p>"+
+	                                                        "{% if data %}{% for x in data.students %}<p><tr><td>{{x[0]}}</td><td>{{x[1]}}</td><td>{{x[2]}}</td><td>{{x[3]}}</td><td>{{x[4]}}</td><td>{{x[5]}}</td><td>{{x[6]}}</td><td>{{x[7]}}</td><td>{{x[8]}}</td><td>{{x[9]}}</td><td>{{x[10]}}</td><td>{{x[11]}}</td><td>{{x[12]}}</td><td>{{x[13]}}</td><td>{{x[14]}}</td><td>{{x[15]}}</td><td>{{x[16]}}</td><td>{{x[17]}}</td><td>{{x[18]}}</td><td>{{x[19]}}</td><td><input id='Update' type='image' src= 'static/imgs/myUpd.png' height='25' width = '25' action='/Update_Student({{x[0]}});' /></td><td><form action ='/delete/{{x[0]}}'><input id='Delete' type='image' src= 'static/imgs/myDel.png' height='25' width = '25'/></form></td></tr></p>{% endfor %}{% endif %}</table></p>";
+
+	    }
+
+	     function push_student(){
+
+    		var state = document.getElementById("demo").innerHTML; //create a variable called state and save the current markup up the demo div in it. This will keep the page from refreshing every-single-time we make a change
+
+    		/*set up a container on firebase and get its unique ID for us to an object to*/
+    		var pushid = myDataRef.push();		//we make a blank space on the backend
+    		var id = pushid.key();				// we get that blank spaces ID, this will let us target specific children later
+
+    		/*get the values to send to firebase*/
+    		var fname = $('#fname').val();		//gets .val from the name textbox
+    		var lname = $('#lname').val();		//gets .val from the msg textbox
+    		var age = $('#age').val();			//gets .val from the name textbox
+    		var major = $('#major').val();		//gets .val from the msg textbox
+    		var gpa = $('#gpa').val();			//gets .val from the name textbox
+    		var advisor = $('#advisor').val();	//gets .val from the msg textbox
+
+
+    		var NewEntry = new Firebase('https://cs329mitryad.firebaseio.com/students/'+id); //This sets a new firebase for the id/path we just created. URLs like this will make it easier to target child nodes later
+
+    		NewEntry.set({id: id, fname: fname, lname: lname, age: age, major: major, gpa: gpa, advisor: advisor}); //we use the .set since we are targeting a specific child-node (the one we just created)
+
+    		document.getElementById("demo").innerHTML = state; //set the demo div back to its previous state
+
+    		/*set the text boxes back to empty*/
+    		$('#fname').val('');
+    		$('#lname').val('');
+    		$('#age').val('');
+    		$('#major').val('');
+    		$('#gpa').val('');
+    		$('#advisor').val('');
+        }
+
+
+
+	 </script>
 
 	 {% endblock %}
 

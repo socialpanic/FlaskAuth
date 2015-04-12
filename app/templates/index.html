@@ -19,6 +19,10 @@
 	<div id = 'main2'>
 
  		<div id = 'forum'>
+
+ 		    {%if msg%}
+ 		        <div id = msg>{{msg}}</div>
+ 		    {%endif%}
  			<form action = "/login" method="post"><p><input type="text" size="18" name="user"  maxlength="255" value="User" /></p><p><input type="password" size="10"
 		name="pass" maxlength="255" value="pass" /><input type="submit" style="background-color: navy; color:white; text-align:center; padding:5px; name=input; font-size:18px" value="Login"></p></form>
 

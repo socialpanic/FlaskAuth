@@ -165,3 +165,8 @@ input[type="text"]:focus
 	height: 94%;
 	padding-top: 5%;
 }
+
+#msg {
+    color: red;
+    text-align: center;
+}
